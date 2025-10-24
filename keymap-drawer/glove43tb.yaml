@@ -22,7 +22,7 @@ layers:
   - J
   - K
   - {t: L, h: SCROLL}
-  - {t: JP AT, h: MOUSE}
+  - {t: '[', h: MOUSE}
   - {t: Z, h: LEFT SHIFT}
   - X
   - C
@@ -90,35 +90,35 @@ layers:
   - {t: ▽, type: trans}
   NUM:
   - ESC
-  - Sft+'
-  - Sft+(
-  - Sft+)
-  - '['
+  - '&'
+  - '*'
+  - (
+  - ']'
   - ;
   - '7'
   - '8'
   - '9'
   - KP SLASH
   - TAB
-  - Sft+$
-  - Sft+%
-  - Sft+&
-  - ']'
+  - $
+  - '%'
+  - ^
+  - \
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ':'
+  - ''''
   - '4'
   - '5'
   - '6'
   - KP ASTERISK
   - LSHFT
-  - Sft+!
-  - Sft+"
-  - Sft+#
+  - '!'
+  - '@'
+  - '#'
   - /
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '='
+  - _
   - '1'
   - '2'
   - '3'
@@ -154,7 +154,7 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - ^
+  - '='
   - LEFT SHIFT
   - F1
   - F2
@@ -166,7 +166,7 @@ layers:
   - PAGE DOWN
   - HOME
   - END
-  - _
+  - Sft+INTERNATIONAL 1
   - LCTRL
   - LGUI
   - LALT
@@ -175,7 +175,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '~'
+  - +
   MOUSE:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
