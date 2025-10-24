@@ -90,9 +90,9 @@ layers:
   - {t: ▽, type: trans}
   NUM:
   - ESC
-  - '&'
-  - '*'
-  - (
+  - '&lst AMPERSAND'
+  - '&lst ASTERISK'
+  - '&lst LEFT_PARENTHESIS'
   - ']'
   - ;
   - '7'
@@ -100,9 +100,9 @@ layers:
   - '9'
   - KP SLASH
   - TAB
-  - $
-  - '%'
-  - ^
+  - '&lst DLLR'
+  - '&lst PERCENT'
+  - '&lst CARET'
   - \
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -112,9 +112,9 @@ layers:
   - '6'
   - KP ASTERISK
   - LSHFT
-  - '!'
-  - '@'
-  - '#'
+  - '&lst EXCLAMATION'
+  - '&lst AT'
+  - '&lst HASH'
   - /
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -166,7 +166,7 @@ layers:
   - PAGE DOWN
   - HOME
   - END
-  - Sft+INTERNATIONAL 1
+  - '&lst INTERNATIONAL_1'
   - LCTRL
   - LGUI
   - LALT
@@ -175,7 +175,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - +
+  - '&lst PLUS'
   MOUSE:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
