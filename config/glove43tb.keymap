@@ -157,19 +157,19 @@
 
         FUNCTION {
             bindings = <
-&kp ESC         &kp F9    &kp F10   &kp F11  &kp F12                      &trans  &trans    &kp UP    &trans     &kp INTERNATIONAL_3
-&kp TAB         &kp F5    &kp F6    &kp F7   &kp F8   &trans      &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp CARET
-&kp LEFT_SHIFT  &kp F1    &kp F2    &kp F3   &kp F4   &trans      &trans  &trans  &trans    &trans    &trans     &kp LS(UNDER)
-&kp LCTRL       &kp LGUI  &kp LALT  &trans   &trans   &trans      &trans  &trans                                 &kp LS(TILDE)
+&kp ESC         &kp F9    &kp F10   &kp F11  &kp F12                      &trans       &trans         &kp UP    &trans     &kp INTERNATIONAL_3
+&kp TAB         &kp F5    &kp F6    &kp F7   &kp F8   &trans      &trans  &trans       &kp LEFT       &kp DOWN  &kp RIGHT  &kp CARET
+&kp LEFT_SHIFT  &kp F1    &kp F2    &kp F3   &kp F4   &trans      &trans  &kp PAGE_UP  &kp PAGE_DOWN  &kp HOME  &kp END    &kp LS(UNDER)
+&kp LCTRL       &kp LGUI  &kp LALT  &trans   &trans   &trans      &trans  &trans                                           &kp LS(TILDE)
             >;
         };
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
 
@@ -184,10 +184,10 @@
 
         BLUETOOTH {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans                                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans           &kp INSERT       &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &bootloader      &kp PRINTSCREEN  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans           &kp DEL          &trans                                                  &bt BT_CLR_ALL
             >;
         };
     };
