@@ -98,7 +98,7 @@ layers:
   - '7'
   - '8'
   - '9'
-  - /
+  - KP SLASH
   - TAB
   - Sft+$
   - Sft+%
@@ -110,7 +110,7 @@ layers:
   - '4'
   - '5'
   - '6'
-  - '*'
+  - KP ASTERISK
   - LSHFT
   - Sft+!
   - Sft+"
@@ -118,11 +118,11 @@ layers:
   - /
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Sft+=
+  - KP EQUAL
   - '1'
   - '2'
   - '3'
-  - '-'
+  - KP MINUS
   - LCTRL
   - LGUI
   - LALT
@@ -131,7 +131,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '0'
-  - +
+  - KP PLUS
   FUNCTION:
   - ESC
   - F9
@@ -166,7 +166,7 @@ layers:
   - PAGE DOWN
   - HOME
   - END
-  - Sft+_
+  - _
   - LCTRL
   - LGUI
   - LALT
@@ -175,7 +175,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Sft+~
+  - '~'
   MOUSE:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
