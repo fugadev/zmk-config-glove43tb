@@ -113,10 +113,10 @@
 
         default_layer {
             bindings = <
-&mt ESC Q         &kp W         &kp E         &kp R                        &kp T                                                        &kp Y      &kp U  &kp I      &kp O    &kp P
-&mt TAB A         &kp S         &kp D         &lt 4 F                      &kp G        &kp LS(LG(S))                    &kp MINUS      &kp H      &kp J  &kp K      &lt 5 L  &lt 4 LEFT_BRACKET
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                        &kp SEMICOLON  &kp N      &kp M  &kp COMMA  &kp DOT  &kp MINUS
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANGUAGE_2  &lt 2 SPACE  &lt_to_layer_0 3 LANGUAGE_1      &kp BACKSPACE  &kp ENTER                             &kp RIGHT_SHIFT
+&mt ESC Q         &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &kp I      &kp O    &kp P
+&mt TAB A         &kp S         &kp D         &lt 4 F                      &kp G        &kp LS(LG(S))                    &kp MINUS        &kp H        &kp J  &kp K      &lt 5 L  &lt 4 LEFT_BRACKET
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                        &kp SEMICOLON    &kp N        &kp M  &kp COMMA  &kp DOT  &kp MINUS
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANGUAGE_2  &lt 2 SPACE  &lt_to_layer_0 3 LANGUAGE_1      &lt 3 BACKSPACE  &lt 2 ENTER                             &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&mouse_wheel_scroll SCRL_DOWN SCRL_UP>;
@@ -135,7 +135,7 @@
             bindings = <
 &kp ESC    &lst AMPERSAND    &lst ASTERISK  &lst LEFT_PARENTHESIS  &kp RIGHT_BRACKET                      &kp SEMI          &kp N7  &kp N8  &kp N9  &kp KP_SLASH
 &kp TAB    &lst DLLR         &lst PERCENT   &lst CARET             &kp BACKSLASH      &trans      &trans  &kp SINGLE_QUOTE  &kp N4  &kp N5  &kp N6  &kp KP_ASTERISK
-&kp LSHFT  &lst EXCLAMATION  &lst AT        &lst HASH              &kp FSLH           &trans      &trans  &kp UNDER         &kp N1  &kp N2  &kp N3  &kp KP_MINUS
+&kp LSHFT  &lst EXCLAMATION  &lst AT        &lst HASH              &kp FSLH           &trans      &trans  &lst UNDER        &kp N1  &kp N2  &kp N3  &kp KP_MINUS
 &kp LCTRL  &kp LGUI          &kp LALT       &trans                 &trans             &trans      &trans  &kp N0                                    &kp KP_PLUS
             >;
         };
