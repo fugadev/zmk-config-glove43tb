@@ -67,11 +67,18 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
         lst: lst {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_press &kp LSHIFT>, <&macro_param_1to1>
-            , <&macro_tap &kp MACRO_PLACEHOLDER>, <&macro_release &kp LSHIFT>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LSHIFT>;
+
             label = "lst";
         };
     };
@@ -126,10 +133,10 @@
 
         NUM {
             bindings = <
-&kp ESC    &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_BRACKET                      &kp SEMI          &kp N7  &kp N8  &kp N9  &kp KP_SLASH
-&kp TAB    &kp DLLR         &kp PERCENT   &kp CARET             &kp BACKSLASH      &trans      &trans  &kp SINGLE_QUOTE  &kp N4  &kp N5  &kp N6  &kp KP_ASTERISK
-&kp LSHFT  &kp EXCLAMATION  &kp AT        &kp HASH              &kp FSLH           &trans      &trans  &kp UNDER         &kp N1  &kp N2  &kp N3  &kp KP_MINUS
-&kp LCTRL  &kp LGUI         &kp LALT      &trans                &trans             &trans      &trans  &kp N0                                    &kp KP_PLUS
+&kp ESC    &lst AMPERSAND    &lst ASTERISK  &lst LEFT_PARENTHESIS  &kp RIGHT_BRACKET                      &kp SEMI          &kp N7  &kp N8  &kp N9  &kp KP_SLASH
+&kp TAB    &lst DLLR         &lst PERCENT   &lst CARET             &kp BACKSLASH      &trans      &trans  &kp SINGLE_QUOTE  &kp N4  &kp N5  &kp N6  &kp KP_ASTERISK
+&kp LSHFT  &lst EXCLAMATION  &lst AT        &lst HASH              &kp FSLH           &trans      &trans  &kp UNDER         &kp N1  &kp N2  &kp N3  &kp KP_MINUS
+&kp LCTRL  &kp LGUI          &kp LALT       &trans                 &trans             &trans      &trans  &kp N0                                    &kp KP_PLUS
             >;
         };
 
@@ -137,8 +144,8 @@
             bindings = <
 &kp ESC         &kp F9    &kp F10   &kp F11  &kp F12                      &trans       &trans         &kp UP    &trans     &kp INTERNATIONAL_3
 &kp TAB         &kp F5    &kp F6    &kp F7   &kp F8   &trans      &trans  &trans       &kp LEFT       &kp DOWN  &kp RIGHT  &kp EQUAL
-&kp LEFT_SHIFT  &kp F1    &kp F2    &kp F3   &kp F4   &trans      &trans  &kp PAGE_UP  &kp PAGE_DOWN  &kp HOME  &kp END    &kp LS(INTERNATIONAL_1)
-&kp LCTRL       &kp LGUI  &kp LALT  &trans   &trans   &trans      &trans  &trans                                           &kp PLUS
+&kp LEFT_SHIFT  &kp F1    &kp F2    &kp F3   &kp F4   &trans      &trans  &kp PAGE_UP  &kp PAGE_DOWN  &kp HOME  &kp END    &lst INTERNATIONAL_1
+&kp LCTRL       &kp LGUI  &kp LALT  &trans   &trans   &trans      &trans  &trans                                           &lst PLUS
             >;
         };
 
