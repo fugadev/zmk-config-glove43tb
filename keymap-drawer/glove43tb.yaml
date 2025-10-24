@@ -290,8 +290,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&ind_con'
+  - '&ind_bat'
   - '&bootloader'
   - PRINTSCREEN
   - {t: ▽, type: trans}
