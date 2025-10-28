@@ -16,8 +16,8 @@ layers:
   - D
   - {t: F, h: MOUSE}
   - G
-  - Sft+Gui+S
-  - '-'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - H
   - J
   - K
@@ -28,8 +28,8 @@ layers:
   - C
   - V
   - B
-  - ':'
-  - ;
+  - Sft+Gui+S
+  - {t: ▽, type: trans}
   - N
   - M
   - ','
@@ -262,7 +262,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '0'
   - {t: ▽, type: trans}
   BLUETOOTH:
   - {t: ▽, type: trans}
@@ -292,7 +292,7 @@ layers:
   - {t: ▽, type: trans}
   - '&ind_con'
   - '&ind_bat'
-  - '&bootloader'
+  - OUT TOG
   - PRINTSCREEN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
