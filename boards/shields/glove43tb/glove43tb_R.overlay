@@ -59,3 +59,11 @@
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 };
+
+&vbatt {
+    compatible = "zmk,battery-voltage-divider";
+    io-channels = <&adc 7>;
+    power-gpios = <&gpio0 14 (GPIO_OPEN_DRAIN | GPIO_ACTIVE_LOW)>;
+    output-ohms = <472000>;
+    full-ohms = <(1000000 + 472000)>;
+};
