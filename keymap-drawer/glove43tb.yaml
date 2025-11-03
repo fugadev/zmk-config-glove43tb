@@ -14,7 +14,7 @@ layers:
   - A
   - S
   - D
-  - {t: F, h: MOUSE}
+  - {t: F, h: '4'}
   - G
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -22,7 +22,7 @@ layers:
   - J
   - K
   - {t: L, h: SCROLL}
-  - {t: '[', h: MOUSE}
+  - {t: '[', h: '4'}
   - {t: Z, h: LEFT SHIFT}
   - X
   - C
@@ -176,7 +176,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&lst PLUS'
-  MOUSE:
+  '4':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
