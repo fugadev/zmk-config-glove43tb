@@ -14,7 +14,7 @@ layers:
   - A
   - S
   - D
-  - {t: F, h: '4'}
+  - {t: F, h: MOUSE}
   - G
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -22,8 +22,8 @@ layers:
   - J
   - K
   - {t: L, h: SCROLL}
-  - {t: '[', h: '4'}
-  - {t: Z, h: LEFT SHIFT}
+  - {t: '[', h: MOUSE}
+  - {t: '&kp_exit_AML Z', h: LEFT SHIFT}
   - X
   - C
   - V
@@ -176,7 +176,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&lst PLUS'
-  '4':
+  MOUSE:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
