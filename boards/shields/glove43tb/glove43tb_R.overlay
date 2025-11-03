@@ -1,4 +1,5 @@
 #include "glove43tb.dtsi"
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -14,11 +15,14 @@
             ;
 };
 
+/* --- 3. トラックボール使用時にレイヤーを一時的に有効化 --- */
 / {
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        /* レイヤー4を10秒間有効化 */
+        input-processors = <&zip_temp_layer 4 10000>;
     };
 };
 
@@ -51,6 +55,7 @@
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
 
+    /* --- 2. トラックボールの Input Listener 設定 --- */
     trackball: trackball@0 {
         status = "okay";
         compatible = "pixart,pmw3610";
@@ -60,6 +65,7 @@
     
         /* zmk-pmw3610-driverの旧AMLは無効化 */
         // automouse-layer = <4>;
+        /* zmk-pmw3610-driverのスクロールレイヤーは残す */
         scroll-layers = <5>;
 
         // arrows {
@@ -74,6 +80,15 @@
         //     tap-ms = <5>;
         // };
     };
+};
+
+/* --- 1. Input Processor 設定 --- */
+&zip_temp_layer {
+    /* 非マウスキー押下でAML解除しないキー（例：Z_SHIFT,CTRL,WIN,ALT,J,K,SHIFT） */
+    excluded-positions = <22 34 35 36 18 19 42>;
+
+    /* キー入力後200msはAML発動禁止（誤爆防止） */
+    require-prior-idle-ms = <200>;
 };
 
 &vbatt {

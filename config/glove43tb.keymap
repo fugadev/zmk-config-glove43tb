@@ -1,4 +1,5 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 150
+#define MOUSE 4
 
 #include <behaviors/rgbled_widget.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
@@ -32,6 +33,11 @@
     trigger-period-ms = <3>;
     time-to-max-speed-ms = <100>;
     acceleration-exponent = <0>;
+};
+
+&mkp_input_listener {
+    /* マウスキー押下で10秒延長 */
+    input-processors = <&zip_temp_layer 4 10000>;
 };
 
 / {
@@ -70,6 +76,24 @@
 
             label = "lst";
         };
+
+        exit_AML: exit_AML {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&tog_off MOUSE>;
+            label = "exit_AML";
+        };
+
+        kp_exit_AML: kp_exit_AML {
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
+            label = "KP_exit_AML";
+        };
     };
 
     behaviors {
@@ -94,6 +118,24 @@
             bindings = <&msc>, <&msc>;
 
             tap-ms = <20>;
+        };
+
+        tog_off: toggle_layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
+
+        /* ホールド時はAML解除せず、タップ時のみ解除 */
+        mt_exit_AML_on_tap: mt_exit_AML_on_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_exit_AML_ON_TAP";
+            bindings = <&kp>, <&kp_exit_AML>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
         };
     };
 
