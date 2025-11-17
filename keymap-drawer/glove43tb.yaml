@@ -23,7 +23,7 @@ layers:
   - K
   - {t: L, h: SCROLL}
   - {t: '[', h: MOUSE}
-  - {t: Z, h: LEFT SHIFT}
+  - {t: '&kp_exit_AML Z', h: LEFT SHIFT}
   - X
   - C
   - V
