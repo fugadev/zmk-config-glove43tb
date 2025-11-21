@@ -28,7 +28,7 @@ layers:
   - C
   - V
   - B
-  - Sft+Gui+S
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - N
   - M
@@ -38,9 +38,9 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: '&to_layer_0 LANGUAGE_2', h: BLUETOOTH}
+  - {t: LANGUAGE 2, h: BLUETOOTH}
   - {t: SPACE, h: NUM}
-  - {t: '&to_layer_0 LANGUAGE_1', h: FUNCTION}
+  - {t: LANGUAGE 1, h: FUNCTION}
   - {t: BACKSPACE, h: FUNCTION}
   - {t: ENTER, h: NUM}
   - RIGHT SHIFT
