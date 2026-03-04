@@ -1,4 +1,6 @@
 #include "glove43tb.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 
 &default_transform {
@@ -23,6 +25,15 @@
         device = <&trackball>;
         /* レイヤー4を10秒間有効化 */
         input-processors = <&zip_temp_layer 4 10000>;
+
+        scroller {
+            layers = <5>;                                      // スクロールレイヤー
+            input-processors = <
+                &zip_xy_to_scroll_mapper                       // XY移動でスクロール
+                &zip_scroll_transform INPUT_TRANSFORM_X_INVERT // スクロールのX軸を反転
+                &zip_scroll_scaler 1 8                         // スクロール感度調整
+            >;
+        };
     };
 };
 
@@ -62,23 +73,11 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-    
-        /* zmk-pmw3610-driverの旧AMLは無効化 */
-        // automouse-layer = <4>;
-        /* zmk-pmw3610-driverのスクロールレイヤーは残す */
-        scroll-layers = <5>;
-
-        // arrows {
-        //     layers = <3>;
-        //     bindings =
-        //         <&kp RIGHT_ARROW>,
-        //         <&kp LEFT_ARROW>,
-        //         <&kp UP_ARROW>,
-        //         <&kp DOWN_ARROW>;
-        //     tick = <10>;
-        //     wait-ms = <5>;
-        //     tap-ms = <5>;
-        // };
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        invert-y;     // マウス操作のY軸を反転
+        cpi = <800>;  // マウス感度
     };
 };
 
@@ -89,12 +88,4 @@
 
     /* キー入力後200msはAML発動禁止（誤爆防止） */
     require-prior-idle-ms = <200>;
-};
-
-&vbatt {
-    compatible = "zmk,battery-voltage-divider";
-    io-channels = <&adc 7>;
-    power-gpios = <&gpio0 14 (GPIO_OPEN_DRAIN | GPIO_ACTIVE_LOW)>;
-    output-ohms = <494000>;
-    full-ohms = <(1000000 + 494000)>;
 };
