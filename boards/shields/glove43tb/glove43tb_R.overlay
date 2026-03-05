@@ -32,6 +32,7 @@
                 &zip_xy_to_scroll_mapper                       // XY移動でスクロール
                 &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT // スクロールのY軸を反転
                 &zip_scroll_scaler 1 16                        // スクロール感度調整
+                &zip_x_scaler 0 1                              // スクロールを縦方向に限定
            >;
         };
     };
