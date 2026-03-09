@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include <scroll-snap.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -32,6 +33,7 @@
             input-processors = <
                 &zip_xy_to_scroll_mapper                       // XY移動でスクロール
                 &zip_scroll_snap                               // スクロール方向をロック
+                &pointer_accel                                 // ポインティング加速
                 &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT // スクロールのY軸を反転
                 &zip_scroll_scaler 1 32                        // スクロール感度調整
            >;
@@ -79,7 +81,7 @@
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         invert-y;     // マウス操作のY軸を反転
-        cpi = <500>;  // マウス感度
+        cpi = <800>;  // マウス感度
     };
 };
 
