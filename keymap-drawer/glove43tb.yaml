@@ -17,7 +17,7 @@ layers:
   - {t: F, h: MOUSE}
   - G
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - SCROLL
   - H
   - J
   - K
@@ -29,7 +29,7 @@ layers:
   - V
   - B
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - BLUETOOTH
   - N
   - M
   - ','
@@ -237,11 +237,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -293,7 +293,7 @@ layers:
   - '&ind_con'
   - '&ind_bat'
   - OUT TOG
-  - PRINTSCREEN
+  - {t: PRINTSCREEN, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -302,7 +302,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - DEL
