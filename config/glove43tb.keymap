@@ -169,6 +169,8 @@
 &kp LSHFT  &lst EXCLAMATION  &lst AT        &lst HASH              &kp FSLH           &trans      &trans  &lst UNDER        &kp N1  &kp N2  &kp N3  &kp KP_MINUS
 &kp LCTRL  &kp LGUI          &kp LALT       &trans                 &trans             &trans      &trans  &kp N0                                    &kp KP_PLUS
             >;
+
+            sensor-bindings = <&sensor_rotate_kp C_BRI_DN C_BRI_UP>;
         };
 
         FUNCTION {
