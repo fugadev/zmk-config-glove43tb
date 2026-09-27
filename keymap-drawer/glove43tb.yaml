@@ -265,7 +265,7 @@ layers:
   - '0'
   - {t: ▽, type: trans}
   BLUETOOTH:
-  - {t: ▽, type: trans}
+  - OUT TOG
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -292,7 +292,7 @@ layers:
   - {t: ▽, type: trans}
   - '&ind_con'
   - '&ind_bat'
-  - OUT TOG
+  - CAPSLOCK
   - {t: PRINTSCREEN, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
