@@ -17,7 +17,7 @@ layers:
   - {t: F, h: MOUSE}
   - G
   - {t: ▽, type: trans}
-  - SCROLL
+  - {t: ▽, type: trans}
   - H
   - J
   - K
@@ -28,7 +28,7 @@ layers:
   - C
   - V
   - B
-  - {t: ▽, type: trans}
+  - SCROLL
   - BLUETOOTH
   - N
   - M
@@ -237,11 +237,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -275,12 +275,12 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
+  - PRINTSCREEN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - SCROLLLOCK
   - INSERT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -292,14 +292,14 @@ layers:
   - {t: ▽, type: trans}
   - '&ind_con'
   - '&ind_bat'
-  - CAPSLOCK
-  - {t: PRINTSCREEN, type: held}
+  - INT MUHENKAN
+  - {t: SCROLLLOCK, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BT CLR
-  - {t: ▽, type: trans}
+  - CAPS
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
