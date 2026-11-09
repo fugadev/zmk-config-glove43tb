@@ -103,3 +103,11 @@
     /* キー入力後200msはAML発動禁止（誤爆防止） */
     require-prior-idle-ms = <200>;
 };
+
+/* Restore the previous battery calibration for the central half.
+ * A full charge reports about 92% with the default divider values.
+ */
+&vbatt {
+    output-ohms = <494000>;
+    full-ohms = <1494000>;
+};
