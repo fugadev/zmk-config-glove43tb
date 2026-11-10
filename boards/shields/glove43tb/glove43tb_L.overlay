@@ -14,3 +14,11 @@
 &left_encoder {
     status = "okay";
 };
+
+/* Restore the previous battery calibration for the peripheral half,
+ * using the same divider values as the central half.
+ */
+&vbatt {
+    output-ohms = <494000>;
+    full-ohms = <1494000>;
+};
